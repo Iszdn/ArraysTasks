@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Bir ölçülü massivin birinci elementi ilə maksimum elementi arasındakı elementlərin cəmini tapan
+proqram tərtib edin. -->
+    <script>
+      let array = [5, 3, 2, 7, 10, 3, 8, 4];
+      let firstElement = array[0];
+      let maxElement = array[0];
+      let foundMax = false;
+      for (var i = 1; i < array.length; i++) {
+        if (array[i] > maxElement) {
+          maxElement = array[i];
+          foundMax = true;
+        }
+      }
+      let sum = 0;
+      if (foundMax) {
+        let startIndex = array.indexOf(firstElement) + 1;
+        let endIndex = array.indexOf(maxElement);
+
+        for (var i = startIndex; i < endIndex; i++) {
+          sum += array[i];
+        }
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>
